@@ -1,4 +1,5 @@
-package com.loan;
+package com.model;
+
 
 public class HomeLoan extends Loan{
 
@@ -12,8 +13,8 @@ public class HomeLoan extends Loan{
 	}
 
 	@Override
-	public boolean checkEligibility(Customer c) {
-		return c.age>=25 && c.balance>=100000 && amount<=5000000;
+	public boolean checkEligibility(Customer customer) {
+		return customer.getSalary()>25000;
 	}
 
 }
